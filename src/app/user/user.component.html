@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+
+      <div class="card mt-5">
+        <div class="card-header">
+          <h2 class="card-title">User Pages</h2>
+        </div>
+        <div class="card-body">
+
+
+
+          <a [routerLink]="[ 'posts' ]"  routerLinkActive="active-link">POSTS</a> -
+          <a [routerLink]="[ 'profile' ]"  routerLinkActive="active-link">Profile</a> -
+          <a [routerLink]="[ 'favorite' ]"  routerLinkActive="active-link">Favorite</a>
+
+          <hr class="mt-5 mb-5">
+          <!-- Injected Pages -->
+          <router-outlet></router-outlet>
+          <hr class="mt-5 mb-5">
+
+          <label for="">Object Monitor:</label>
+          <p class="text-center" *ngIf="userDetails">{{userDetails | json}} </p>
+          <p class="text-center text-muted" *ngIf="!userDetails">Object not initiated yet.</p>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>

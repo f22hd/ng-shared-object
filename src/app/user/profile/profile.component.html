@@ -1,0 +1,9 @@
+<h4 class="text-center text-danger">Profile Component</h4>
+
+<label for="">Status:</label>
+<select class="form-control" name="" id="" [(ngModel)]="status">
+  <option *ngFor="let status of statusList" [value]="status">{{status}}</option>
+</select>
+
+<button class="btn btn-sm btn-danger m-2" (click)='update()'>Update</button>
+
